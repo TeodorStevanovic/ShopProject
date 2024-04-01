@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 const Header = () => {
   const productData = useSelector((state) => state.shop.productData);
   const userInfo = useSelector((state) => state.shop.userInfo);
-  console.log(userInfo);
+
   return (
     <div className="w-full h-20 bg-black text-white border-b-[1px] border-b-gray-800 sticky top-0 z-50">
       <div className="max-w-screen-xl h-full mx-auto flex items-center justify-between">
@@ -22,13 +22,6 @@ const Header = () => {
             hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 font-bodyFont"
             >
               <Link to={'/'}> Home</Link>{' '}
-            </li>
-
-            <li
-              className="text-base text-white font-bold hover:text-gray-50
-            hover:underline underline-offset-2 decoration-[1px] cursor-pointer duration-300 font-bodyFont "
-            >
-              <Link to={'/blog'}> Blog</Link>{' '}
             </li>
 
             <li

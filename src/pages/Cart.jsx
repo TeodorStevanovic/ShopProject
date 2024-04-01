@@ -11,7 +11,7 @@ const Cart = () => {
 
   useEffect(() => {
     let price = 0;
-    productData.map((item) => {
+    productData.map((item) => { 
       price += item.price * item.quantity;
       return price;
     });
@@ -19,10 +19,8 @@ const Cart = () => {
   }, [productData]);
 
   const handleCheckout = () => {
-    if (userInfo) {
-      setPayNow(!payNow);
-    } else {
-      console.log('23');
+    if (userInfo) { 
+      setPayNow(!payNow); 
     }
   };
   return (
